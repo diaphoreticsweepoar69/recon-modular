@@ -1,6 +1,9 @@
 
-<!-- PROJECT SHIELDS -->
 <div align="center">
+
+# 🛡️ OMNISCIENT V3
+
+### The Ultimate Reconnaissance & Adversary Simulation Framework
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-3.0.0-brightgreen)]()
@@ -8,24 +11,14 @@
 [![Bash](https://img.shields.io/badge/made%20with-bash-1f425f.svg)](https://www.gnu.org/software/bash/)
 [![AI Powered](https://img.shields.io/badge/AI%2FML-Powered-orange)]()
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20WSL-lightgrey)]()
+[![Post-Quantum](https://img.shields.io/badge/Post--Quantum-Ready-9cf)]()
+[![Docker](https://img.shields.io/badge/docker-ready-2496ED?logo=docker)]()
+[![Kubernetes](https://img.shields.io/badge/kubernetes-ready-326CE5?logo=kubernetes)]()
+[![GitHub stars](https://img.shields.io/github/stars/your-org/omniscient?style=social)]()
 
 </div>
 
-<br />
-<p align="center">
-  <img src="assets/omniscient-logo.png" alt="Omniscient Logo" width="200"/> <!-- replace with your own -->
-</p>
-
-<h1 align="center">🛡️ OMNISCIENT V3</h1>
-<h3 align="center">Next‑Generation Reconnaissance & Adversary Simulation Framework</h3>
-
-<p align="center">
-  A unified, AI‑augmented pipeline integrating <b>130+ security tools</b>, <br/>
-  <b>distributed orchestration</b>, <b>generative AI models</b>, <b>blockchain audit trails</b>, <br/>
-  and <b>post‑quantum stealth</b> – built for red teams, bug bounty hunters, and security researchers.
-</p>
-
-<br/>
+---
 
 > ⚠️ **CRITICAL DISCLAIMER**  
 > This tool is provided **exclusively** for **authorised security assessments**, **educational use**, and **bug bounty engagements** where you have **explicit written permission** to test.  
@@ -34,127 +27,154 @@
 
 ---
 
-## 📑 Table of Contents
+## 📖 Table of Contents
 
-- [Why Omniscient?](#-why-omniscient)
-- [✨ Features](#-features)
+- [🌟 Why Omniscient?](#-why-omniscient)
+- [🚀 Key Features](#-key-features)
+- [📸 Visual Pipeline](#-visual-pipeline)
 - [⚡ Quick Start](#-quick-start)
 - [📦 Requirements](#-requirements)
 - [🔧 Installation](#-installation)
 - [⚙️ Configuration](#️-configuration)
-- [🚀 Usage](#-usage)
+- [📘 Usage & Examples](#-usage--examples)
 - [🔄 Reconnaissance Phases](#-reconnaissance-phases)
+- [🧠 AI & Machine Learning](#-ai--machine-learning)
+- [🌐 Distributed Execution](#-distributed-execution)
+- [📊 Reporting & Visualisation](#-reporting--visualisation)
 - [📂 Output Structure](#-output-structure)
-- [🧠 AI Modules](#-ai-modules)
-- [🔐 Security & Privacy](#-security--privacy)
-- [🤝 Contributing](#-contributing)
+- [🔐 Security, Privacy & Compliance](#-security-privacy--compliance)
+- [❓ Troubleshooting](#-troubleshooting)
+- [🤝 Contributing & Support](#-contributing--support)
 - [📜 License](#-license)
-- [❗ Disclaimer](#-disclaimer)
+- [❗ Final Disclaimer](#-final-disclaimer)
 
 ---
 
-## 🧠 Why Omniscient?
+## 🌟 Why Omniscient?
 
-Modern attack surfaces are **massive** and constantly shifting. Traditional recon workflows are fragmented, slow, and miss critical blind spots. Omniscient V3 solves this by:
+Modern attack surfaces are **massive**, **dynamic**, and **increasingly complex**. Traditional reconnaissance workflows are:
 
-- **Unifying 130+ best-of-breed tools** (Amass, Nuclei, Metasploit, Nmap, SQLMap, etc.) under a single execution graph.
-- **Augmenting results with AI** – GANs for subdomain/endpoint generation, reinforcement learning for exploit chaining, and deep‑learning vulnerability scoring.
-- **Distributing tasks** across Kubernetes, AWS Lambda, or Docker Swarm for **blazing‑fast parallel scans**.
-- **Providing immutable audit trails** via blockchain‑anchored logs (Ethereum), crucial for red‑team engagements and compliance.
-- **Embedding advanced stealth** – proxy chaining, post‑quantum encryption, anti‑WAF fingerprinting, and steganography – to emulate real‑world adversaries.
-- **Self‑healing orchestration** with Apache Airflow, dynamic thread scaling, and eBPF kernel monitoring.
+- **Fragmented** – juggling dozens of tools, each with its own output format.
+- **Slow** – sequential execution wastes time and resources.
+- **Incomplete** – blind spots in cloud, IoT, supply chain, and dark web.
+- **Non‑auditable** – no immutable record of actions for compliance or red‑team reporting.
+
+**Omniscient V3** solves these challenges by:
+
+- **Unifying 130+ best‑of‑breed security tools** into a single, cohesive pipeline.
+- **Augmenting results with AI** – using GANs, reinforcement learning, and deep neural networks to predict subdomains, endpoints, vulnerabilities, and exploit chains.
+- **Distributing workloads** across Kubernetes, AWS Lambda, Docker Swarm, or Slurm for **massive parallelisation**.
+- **Embedding advanced stealth** – Tor, proxy chaining, post‑quantum encryption (Kyber‑1024), and steganography to emulate sophisticated adversaries.
+- **Providing immutable audit trails** via blockchain‑anchored logs (Ethereum smart contracts) – essential for red‑team engagements and regulatory compliance.
+- **Self‑healing orchestration** with dynamic thread scaling, eBPF kernel monitoring, and Apache Airflow integration.
+
+Whether you're a **bug bounty hunter**, **red teamer**, **security researcher**, or **DevSecOps engineer**, Omniscient gives you the edge to discover vulnerabilities faster, deeper, and more reliably than ever before.
 
 ---
 
-## ✨ Features
+## 🚀 Key Features
 
-<details open>
-<summary><b>🔍 Hyper‑Deep Reconnaissance</b></summary>
-<br>
+<table>
+<tr>
+<td width="50%">
 
-- **Subdomain enumeration** – Amass, Subfinder, Chaos, DNSx, Puredns, Assetfinder, Findomain, Shodan, ZoomEye, SecurityTrails, Censys, Netlas, BinaryEdge, etc.
-- **URL & endpoint discovery** – GAU, Katana, Gospider, Wayback, ParamSpider, Arjun, API‑Scout, Feroxbuster, Dirsearch, Kiterunner.
-- **Network scanning** – Nmap (full scripts), Masscan, Rustscan, Zmap, DNSRecon, Fierce, WAFW00F, Fingerprintx, Cloudflare‑scrape.
-- **Vulnerability scanning** – Nuclei (60+ templates), Dalfox XSS, Nikto, Wapiti, TestSSL, SSLyze, WhatWeb, JAWS, WPscan, ZAP, Boofuzz, Xray, Arachni, OWASP Nettacker.
-- **Cloud & container security** – CloudSploit, Trivy, ScoutSuite (AWS/GCP/Azure), Clair, Docker Bench, Kube‑Hunter, Deepfence, Lynis.
-- **IoT/OT discovery** – Shodan, Censys, Fingerprintx, Nmap SCADA scripts.
-- **Dark web monitoring** – Tor‑enabled scraping of .onion leak sites, marketplaces, and dark pools.
-- **Supply chain analysis** – Grype, Syft SBOM, Deps.dev, AI‑powered dependency risk scoring.
-- **Blockchain intelligence** – Address tracking, transaction analysis on Bitcoin/Ethereum.
+#### 🔍 **Hyper‑Deep Reconnaissance**
+- **Subdomain enumeration** – 20+ tools (Amass, Subfinder, Chaos, Shodan, Censys…)
+- **URL/endpoint discovery** – GAU, Katana, Wayback, ParamSpider, Arjun, API‑Scout…
+- **Network scanning** – Nmap, Masscan, Rustscan, Zmap, DNSRecon, WAFW00F…
+- **Vulnerability scanning** – Nuclei (60+ templates), Dalfox, Nikto, ZAP, Xray, Arachni…
+- **Cloud & container** – CloudSploit, Trivy, ScoutSuite, Kube‑Hunter, Docker Bench…
+- **IoT/OT discovery** – Shodan, Censys, Fingerprintx, SCADA scripts
+- **Dark web & deep web** – Tor‑enabled scraping of .onion leak sites and marketplaces
+- **Supply chain analysis** – SBOM generation (Grype, Syft), dependency risk scoring
+- **Blockchain intelligence** – Bitcoin/Ethereum address tracking, transaction analysis
 
-</details>
+</td>
+<td width="50%">
 
-<details>
-<summary><b>🧠 AI‑Augmented Analysis</b></summary>
-<br>
+#### 🧠 **AI‑Augmented Analysis**
+- **GAN‑powered subdomain permutations** – generate realistic, unseen subdomains
+- **Endpoint prediction** – ML‑based API path and parameter guessing
+- **Zero‑day prioritisation** – reinforcement learning models that predict exploitability
+- **Automated exploit chaining** – AI correlates vulnerabilities for multi‑step attacks
+- **Dynamic risk scoring** – context‑aware scoring combining CVSS, dark web mentions, supply chain risks
+- **Deepfake OSINT detection** – identify synthetic media threats
+- **Resource optimisation** – real‑time thread/GPU scaling based on system load
 
-- **GAN‑powered subdomain permutation** – generate realistic, never‑seen subdomains.
-- **Endpoint prediction** – ML‑based API path and parameter guessing.
-- **Zero‑day prioritisation** – reinforcement learning models that predict exploitability.
-- **Automated exploit chaining** – AI correlates vulnerabilities for multi‑step attacks.
-- **Dynamic risk scoring** – context‑aware scoring combining CVSS, dark web mentions, supply chain risks.
-- **Deepfake OSINT detection** – identify synthetic media threats.
-- **Resource optimization** – real‑time thread/GPU scaling based on system load and model inference.
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-</details>
+#### 🚀 **Distributed & High‑Performance**
+- **Orchestration backends**: Kubernetes, Slurm, AWS Lambda, Docker Swarm, Airflow
+- **GPU/TPU acceleration** – CUDA, TensorRT, Coral for lightning‑fast AI inference
+- **Redis‑backed distributed caching** – deduplication and speed
+- **eBPF kernel‑level monitoring** – container and network insights
+- **Adaptive threading** – automatically scales concurrent tasks without overwhelming the system
 
-<details>
-<summary><b>🚀 Distributed & High‑Performance</b></summary>
-<br>
+</td>
+<td width="50%">
 
-- **Orchestration backends**: Kubernetes (Helm chart included), Slurm, AWS Lambda, Docker Swarm, Airflow.
-- **GPU/TPU acceleration** for AI models (CUDA, TensorRT, Coral).
-- **Redis‑backed distributed caching** with clustering for deduplication and speed.
-- **eBPF kernel‑level monitoring** for container and network insights.
-- **Adaptive threading** – automatically scales concurrent tasks without overwhelming the system.
+#### 🛡️ **Stealth & Evasion**
+- **Tor & proxy chaining** – randomised elite proxies with automatic rotation
+- **Anti‑WAF & fingerprint obfuscation** – header randomisation, JA3/JARM spoofing
+- **Post‑quantum encryption** – Kyber‑1024 for key exchange, AES‑384 for data
+- **Steganographic exfiltration** – hide data in images or network traffic
+- **Signature obfuscation** – on‑the‑fly payload mutation (educational mode)
 
-</details>
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-<details>
-<summary><b>🛡️ Stealth & Evasion</b></summary>
-<br>
+#### 📜 **Blockchain Auditing & Compliance**
+- **JSONL structured logging** with chain‑of‑trust hashing (SHA‑512)
+- **Ethereum smart contract** – anchor hashes for tamper‑proof audit trails
+- **Automatic scope validation** against HackerOne, Bugcrowd, Intigriti, YesWeHack
+- **Pre‑built compliance reports** aligned with NIST 800‑53, GDPR, CCPA, ISO 27001
 
-- **Tor & proxy chaining** – randomized elite proxies with automatic rotation.
-- **Anti‑WAF & fingerprint obfuscation** – header randomization, JA3/JARM spoofing.
-- **Post‑quantum encryption** – Kyber‑1024 for key exchange, AES‑384 for data.
-- **Steganographic exfiltration** – hide data in images or network traffic.
-- **Signature obfuscation** – on‑the‑fly payload mutation (educational mode).
+</td>
+<td width="50%">
 
-</details>
+#### 📊 **Multi‑Format Reporting**
+- **Exports**: PDF, JSON, CSV, HTML, interactive graphs, VR (Blender)
+- **Real‑time dashboards** – web‑based, 3D topology maps
+- **SIEM & collaboration**: Slack, Discord, Teams, Splunk, ELK webhooks
 
-<details>
-<summary><b>📜 Blockchain Auditing & Compliance</b></summary>
-<br>
+</td>
+</tr>
+</table>
 
-- **JSONL structured logging** with chain‑of‑trust hashing (SHA‑512).
-- **Ethereum smart contract** – anchor hashes for tamper‑proof audit trails.
-- **Automatic scope validation** against HackerOne, Bugcrowd, Intigriti, YesWeHack.
-- **Pre‑built compliance reports** aligned with NIST 800‑53, GDPR, CCPA, ISO 27001.
+---
 
-</details>
+## 📸 Visual Pipeline
 
-<details>
-<summary><b>📊 Multi‑Format Reporting</b></summary>
-<br>
+```
 
-- **Exports**: PDF, JSON, CSV, HTML, interactive graphs, VR (Blender).
-- **Real‑time dashboards** (web‑based, 3D topology maps).
-- **SIEM & collaboration**: Slack, Discord, Teams, Splunk, ELK webhooks.
+┌─────────────────────────────────────────────────────────────────────┐
+│                        OMNISCIENT V3 PIPELINE                       │
+├─────────────────────────────────────────────────────────────────────┤
+│  [Phase 1]  Setup & Tool Check   →  Install missing tools, load plugins, init cache │
+│  [Phase 2]  Compliance Check     →  Validate against bug bounty scopes             │
+│  [Phase 3]  Subdomain Enum       →  20+ tools + AI GAN permutations                │
+│  [Phase 4]  URL Discovery        →  Live hosts, endpoints, JS analysis, API guessing│
+│  [Phase 5]  Network Recon        →  Port scan, service detection, WAF fingerprint   │
+│  [Phase 6]  Vulnerability Scan   →  Nuclei, Dalfox, Nikto, ZAP, CVE correlation     │
+│  [Phase 7]  Cloud/Container      →  CloudSploit, Trivy, Scout, Kube‑Hunter         │
+│  [Phase 8]  Exploit Validation   →  SQLi, RCE, Metasploit, C2 (if enabled)          │
+│  [Phase 9]  Threat Intelligence  →  OTX, VT, GreyNoise, Censys, Recorded Future     │
+│  [Phase 10] OSINT & Social       →  TheHarvester, Maltego, Deepfake detection       │
+│  [Phase 11] Code Repo Scan       →  TruffleHog, Gitleaks, Semgrep, dependency scan  │
+│  [Phase 12] Dark Web             →  Tor‑enabled leak and marketplace searches        │
+│  [Phase 13] IoT/OT Discovery     →  Shodan/Censys for ICS/SCADA                     │
+│  [Phase 14] Supply Chain & Block →  SBOM, dependency risks, crypto tracking          │
+│  [Phase 15] Reporting & Stegano  →  Generate encrypted reports, optional exfil      │
+└─────────────────────────────────────────────────────────────────────┘
 
-</details>
+```
 
-<details>
-<summary><b>⚔️ Simulated Adversary Capabilities <br/><sub>(Educational / Authorized Only)</sub></b></summary>
-<br>
-
-All offensive modules are **disabled by default** and require explicit activation.
-
-- Automated exploitation (Metasploit, SQLMap, Nuclei RCE).
-- Credential harvesting & lateral movement simulation (Hydra, Medusa, PSExec).
-- Persistence mechanisms (scheduled tasks, WMI, cron, Metasploit backdoors).
-- C2 beaconing (HTTP/HTTPS/DNS) for red‑team exercises.
-
-</details>
+All phases run in parallel where possible, with dynamic thread allocation and Redis‑based caching for optimal speed.
 
 ---
 
@@ -162,7 +182,7 @@ All offensive modules are **disabled by default** and require explicit activatio
 
 ```bash
 # 1. Clone and set permissions
-git clone https://github.com/your-repo/omniscient.git
+git clone https://github.com/your-org/omniscient.git
 cd omniscient && chmod +x recon1.sh
 
 # 2. Export your API keys (optional but recommended)
@@ -182,11 +202,7 @@ For a controlled installation, follow the full steps below.
 
 📦 Requirements
 
-<details>
-<summary>Click to expand</summary>
-<br>
-
-· Operating System: Linux (Kali, Ubuntu 20.04+, Parrot, Debian) – WSL supported with limitations.
+· Operating System: Linux (Kali, Ubuntu 20.04+, Parrot, Debian) – WSL2 supported with limitations.
 · Architecture: x86_64 (ARM64 supported for most tools).
 · Dependencies: 130+ external tools – see REQUIRED_TOOLS inside the script. The script auto‑installs missing ones.
 · API Keys (optional, but highly recommended for full power):
@@ -195,8 +211,6 @@ For a controlled installation, follow the full steps below.
 · GPU (optional): NVIDIA GPU with CUDA 11+ for AI acceleration.
 · Tor (optional): for anonymous routing and dark web modules.
 · Wordlists: Place your custom wordlists in /opt/wordlists (subdomain, permutation, directory, user/pass lists).
-
-</details>
 
 ---
 
@@ -284,14 +298,14 @@ OUTPUT_DIR Base output directory recon-<timestamp>
 ENCRYPT_DUMPS AES‑384 encrypt sensitive outputs true
 ENCRYPT_KEY AES key (auto‑generated if not set) random 48 bytes
 POST_QUANTUM_KEY Kyber‑1024 key for quantum‑safe ops auto‑generated
-SLACK_WEBHOOK Slack incoming webhook URL (none)
-DISCORD_WEBHOOK Discord webhook URL (none)
-SIEM_WEBHOOK SIEM/Webhook endpoint for real‑time events (none)
+SLACK_WEBHOOK Slack incoming webhook URL (empty)
+DISCORD_WEBHOOK Discord webhook URL (empty)
+SIEM_WEBHOOK SIEM/Webhook endpoint for real‑time events (empty)
 API_KEYS_FILE Path to API keys file /etc/recon_api_keys.conf
 VAULT_ADDR HashiCorp Vault address http://127.0.0.1:8200
-VAULT_TOKEN Vault authentication token (none)
-KEYBASE_USER Keybase user for key exchange (none)
-YUBIKEY_ID YubiKey OATH ID for TOTP (none)
+VAULT_TOKEN Vault authentication token (empty)
+KEYBASE_USER Keybase user for key exchange (empty)
+YUBIKEY_ID YubiKey OATH ID for TOTP (empty)
 HSM_DEVICE HSM device path /dev/hsm0
 TOR_ENABLED Route all traffic through Tor true
 STEALTH_MODE Enable anti‑detection (random UA, proxy rotation) true
@@ -328,7 +342,7 @@ PLUGIN_DIR Custom plugins directory /opt/recon_plugins
 
 ---
 
-🚀 Usage
+📘 Usage & Examples
 
 Basic Scan
 
@@ -354,29 +368,80 @@ C2_SERVER=10.0.0.50 PERSISTENCE_ENABLED=true EXPLOIT_MODE=true ./recon1.sh autho
 
 🛑 WARNING: The C2_SERVER, PERSISTENCE_ENABLED, and EXPLOIT_MODE variables activate active attack modules. Never use them without written, legal authorisation.
 
+Scheduled Scans (Airflow)
+
+If SCHEDULE_MODE=true, the script registers a DAG in Airflow for recurring scans. You can then trigger it via the Airflow UI or API.
+
 ---
 
 🔄 Reconnaissance Phases
 
-The script executes a comprehensive 14‑phase pipeline:
+The script executes a comprehensive 14‑phase pipeline (plus reporting), each with multiple parallel tasks:
 
-1. Setup & Tool Check – Auto‑install missing tools, load plugins, initialise directories and Redis caching.
-2. Compliance Check – Validate targets against HackerOne, Bugcrowd, Intigriti, YesWeHack scopes.
-3. Subdomain Enumeration – 20+ tools including AI‑driven GAN permutations.
-4. URL & Endpoint Discovery – Live host probing, historical URL extraction, JS analysis, API endpoint guessing.
-5. Network Reconnaissance – Mass port scanning, service detection, WAF fingerprinting, traceroute.
-6. Vulnerability Scanning – Multitude of scanners (Nuclei, Dalfox, Nikto, Zap, etc.) with CVE correlation.
-7. Cloud & Container Scanning – CloudSploit, Trivy, ScoutSuite, Kube‑Hunter, Docker benchmarks.
-8. Exploit Validation & Malicious Ops – SQLi, RCE verification; C2 beaconing and persistence (if enabled).
-9. Threat Intelligence – OTX, VirusTotal, GreyNoise, Censys, Recorded Future, ThreatConnect, dark web.
-10. OSINT & Social Media Recon – TheHarvester, Recon‑NG, Maltego, Deepfake detection.
-11. Code Repository Scanning – TruffleHog, Gitleaks, Semgrep, dependency scanning.
-12. Dark Web Scanning – Tor‑enabled search for leaks, marketplace mentions.
-13. IoT/OT Discovery – Shodan/Censys for ICS/SCADA, Modbus enumeration.
-14. Supply Chain & Blockchain Analysis – SBOM generation, dependency vulnerability check, crypto address tracking.
-15. Reporting & Steganography – Generate encrypted reports in multiple formats; optional steganographic exfiltration of findings.
+Phase Name Description
+1 Setup & Tool Check Auto‑install missing tools, load plugins, initialise directories and Redis caching.
+2 Compliance Check Validate targets against HackerOne, Bugcrowd, Intigriti, YesWeHack scopes.
+3 Subdomain Enumeration 20+ tools including AI‑driven GAN permutations.
+4 URL & Endpoint Discovery Live host probing, historical URL extraction, JS analysis, API endpoint guessing.
+5 Network Reconnaissance Mass port scanning, service detection, WAF fingerprinting, traceroute.
+6 Vulnerability Scanning Multitude of scanners (Nuclei, Dalfox, Nikto, Zap, etc.) with CVE correlation.
+7 Cloud & Container Scanning CloudSploit, Trivy, ScoutSuite, Kube‑Hunter, Docker benchmarks.
+8 Exploit Validation & Malicious Ops SQLi, RCE verification; C2 beaconing and persistence (if enabled).
+9 Threat Intelligence OTX, VirusTotal, GreyNoise, Censys, Recorded Future, ThreatConnect, dark web.
+10 OSINT & Social Media Recon TheHarvester, Recon‑NG, Maltego, Deepfake detection.
+11 Code Repository Scanning TruffleHog, Gitleaks, Semgrep, dependency scanning.
+12 Dark Web Scanning Tor‑enabled search for leaks, marketplace mentions.
+13 IoT/OT Discovery Shodan/Censys for ICS/SCADA, Modbus enumeration.
+14 Supply Chain & Blockchain Analysis SBOM generation, dependency vulnerability check, crypto address tracking.
+15 Reporting & Steganography Generate encrypted reports in multiple formats; optional steganographic exfiltration of findings.
 
 All phases run in parallel where possible, with dynamic thread allocation and Redis‑based caching for optimal speed.
+
+---
+
+🧠 AI & Machine Learning
+
+Omniscient integrates AI/ML at multiple levels:
+
+Module Technology Purpose
+Subdomain Permutation Generative Adversarial Networks (GAN) Generate realistic, never‑seen subdomains from seed data.
+Endpoint Prediction Neural Networks Predict API endpoints, parameters, and hidden paths.
+Vulnerability Prioritisation Reinforcement Learning Rank vulnerabilities by exploitability and business impact.
+Exploit Chaining Graph Neural Networks Link vulnerabilities into multi‑step attack paths.
+Risk Scoring Ensemble Models Combine CVSS, dark web mentions, and supply chain data.
+Deepfake OSINT Convolutional Neural Networks (CNN) Detect manipulated media (images, audio).
+Resource Optimisation Regression Models Auto‑scale threads, GPU/TPU usage based on load.
+
+Custom AI models can be dropped into AI_MODEL_DIR and are automatically invoked if they match the expected filenames. GPU/TPU acceleration is enabled via GPU_ENABLED and TPU_ENABLED.
+
+---
+
+🌐 Distributed Execution
+
+Omniscient can scale horizontally across clusters:
+
+· Kubernetes – Helm chart included; spawns parallel pods.
+· Slurm – For HPC environments.
+· AWS Lambda – Serverless function execution.
+· Docker Swarm – Containerised workers.
+· Apache Airflow – Orchestrate complex DAGs.
+
+Set DISTRIBUTED_MODE=true and choose a backend via DISTRIBUTED_BACKEND (default: auto‑detect).
+Tasks are distributed at the phase level, with each worker handling a subset of targets or tools.
+
+---
+
+📊 Reporting & Visualisation
+
+Omniscient generates rich reports in multiple formats:
+
+· PDF – Professional, printable reports with executive summaries.
+· HTML – Interactive dashboards with filters and drill‑downs.
+· JSON/CSV – Machine‑readable for SIEM ingestion and further analysis.
+· Graph – Network topology maps (Neo4j export).
+· VR – Blender‑ready 3D visualisations of attack surfaces.
+
+Real‑time notifications can be pushed to Slack, Discord, Teams, or any SIEM endpoint via webhooks.
 
 ---
 
@@ -409,26 +474,7 @@ recon-20260116-120000/
 
 ---
 
-🧠 AI Modules
-
-Omniscient expects optional Python scripts inside AI_MODEL_DIR (default /opt/ai_models). If present and GPU_ENABLED=true, they are automatically invoked:
-
-Script Purpose
-subdomain_gan.py GAN‑based subdomain generation and validation
-endpoint_gan.py Predict likely API endpoints and parameters
-vuln_gan.py Correlate vulnerabilities and suggest exploit chains
-exploit_gan.py Reinforcement learning for automated exploitation
-risk_scorer.py Dynamic, context‑aware vulnerability prioritization
-resource_optimizer.py Auto‑scale threads and GPU usage based on load
-deepfake_osint.py Detect deepfake content related to the target
-supply_chain_analyzer.py Analyse dependencies for malicious packages
-blockchain_analyzer.py Trace cryptocurrency transactions
-
-The script detects available hardware (CUDA, TPU) and passes appropriate flags.
-
----
-
-🔐 Security & Privacy
+🔐 Security, Privacy & Compliance
 
 · Encryption at rest: All sensitive outputs (reports, dumps, keys) are encrypted with AES‑384. Quantum‑safe Kyber‑1024 signatures are used for critical exchanges.
 · Immutable audit logs: Every action is hashed (SHA‑512) and the chain can be anchored to an Ethereum smart contract, providing tamper‑proof evidence.
@@ -436,20 +482,50 @@ The script detects available hardware (CUDA, TPU) and passes appropriate flags.
 · Key exchange: Securely share session keys via Keybase or HSM‑backed channels.
 · Steganographic exfiltration: Results can be hidden in innocent‑looking images and sent to a C2 server (educational).
 · No phone‑home: The tool does not transmit any telemetry. All data stays local or within your controlled infrastructure.
+· Compliance: Automatic scope validation against bug bounty platforms and built‑in alignment with NIST 800‑53, GDPR, CCPA, ISO 27001.
 
 ---
 
-🤝 Contributing
+❓ Troubleshooting
 
-Contributions are what make the open‑source community amazing. Any improvements you make are warmly appreciated.
+Issue Solution
+Missing tools The script attempts auto‑install. If a tool fails, install it manually and ensure it’s in $PATH.
+Redis connection refused Ensure Redis is running: sudo systemctl start redis-server. If using cluster, check configuration.
+Tor not working Verify Tor is installed and running: sudo systemctl start tor. For dark web modules, ensure torify is functional.
+GPU not detected Check NVIDIA drivers and CUDA version. Set GPU_ENABLED=false to fallback to CPU.
+Out of memory Reduce THREADS or limit concurrency via RATE_LIMIT.
+API key errors Verify keys are correctly exported and have necessary permissions. Use log_json to see detailed errors.
+Permission denied Ensure script and output directories have proper ownership: sudo chown -R $USER:$USER ..
+Slow performance Enable distributed mode, increase Redis cache size, or reduce the number of phases if not needed.
 
-1. Fork the repository
-2. Create a feature branch (git checkout -b feature/AmazingFeature)
-3. Commit your changes (git commit -m 'Add some AmazingFeature')
-4. Push to the branch (git push origin feature/AmazingFeature)
-5. Open a Pull Request
+For further assistance, open an issue on GitHub or consult the internal logging (logs/recon.log).
+
+---
+
+🤝 Contributing & Support
+
+We welcome contributions from the community! Whether it's a bug fix, new feature, documentation improvement, or even a new AI model, your help is appreciated.
+
+How to Contribute
+
+1. Fork the repository.
+2. Create a feature branch (git checkout -b feature/AmazingFeature).
+3. Commit your changes (git commit -m 'Add some AmazingFeature').
+4. Push to the branch (git push origin feature/AmazingFeature).
+5. Open a Pull Request.
 
 Please ensure your code is well‑documented and includes test cases where applicable.
+
+Support
+
+· 📧 Email: aliheydari1381doc@gmail.com 
+· 💬 github: Ali-hey-0 
+· 🐛 telegram: ali_heyda
+· 📚 Documentation: Wiki
+
+Sponsors
+
+If you find Omniscient useful, consider sponsoring the project to support ongoing development and maintenance.
 
 ---
 
@@ -460,7 +536,7 @@ This project is intended for educational and authorised research purposes only.
 
 ---
 
-❗ Disclaimer
+❗ Final Disclaimer
 
 ```text
 THIS TOOL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
@@ -470,7 +546,8 @@ BY USING THIS SOFTWARE, YOU AGREE THAT YOU ARE SOLELY RESPONSIBLE FOR YOUR ACTIO
 AND WILL COMPLY WITH ALL APPLICABLE LAWS AND REGULATIONS.
 ```
 
-<br/>
+---
+
 <p align="center">
-  <b>Happy (and ethical) hacking! 🧠🔍</b>
+  <b>🧠 Happy (and ethical) hacking!</b>
 </p>
