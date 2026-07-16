@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 🛡️ OMNISCIENT V3
@@ -289,6 +288,7 @@ Alternatively, use HashiCorp Vault (set VAULT_ADDR and VAULT_TOKEN) or YubiKey O
 
 ⚙️ Configuration
 
+
 All behaviour is controlled via environment variables. Export them before execution or set them inline.
 
 Variable Description Default
@@ -398,6 +398,7 @@ Phase Name Description
 All phases run in parallel where possible, with dynamic thread allocation and Redis‑based caching for optimal speed.
 
 ---
+
 
 🧠 AI & Machine Learning
 
